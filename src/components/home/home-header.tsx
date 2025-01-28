@@ -17,8 +17,8 @@ export const HomeHeader = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div className="">
-      <header className="flex justify-between items-center p-6 border-b-2 border-gray-50 h-20">
+    <div className="flex justify-center">
+      <header className="flex justify-between items-center p-6 border-b-2 border-gray-50 h-20 w-full max-w-screen-2xl">
         <div className="">
           {/* <div className="lg:hidden"> */}
           <Logo size={80} />
