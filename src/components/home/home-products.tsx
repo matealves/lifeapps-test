@@ -44,33 +44,49 @@ export const HomeProducts = () => {
     <div className="h-screen-2xl m-8 flex flex-col justify-center items-center min-h-screen">
       <div className="w-full max-w-screen-2xl justify-center flex">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-14">
-          {products.map(({ id, name, image, price }) => (
-            <ProductItem key={id} image={image} name={name} price={price} />
-          ))}
+          {products.map(
+            ({
+              id,
+              name,
+              image,
+              price,
+              discount_percentage,
+              promotional_price,
+            }) => (
+              <ProductItem
+                key={id}
+                image={image}
+                name={name}
+                price={price}
+                discount_percentage={discount_percentage}
+                promotional_price={promotional_price}
+              />
+            )
+          )}
         </div>
       </div>
-      <div className="mt-10">
-        {/* <p className="text-center text-sm">
-          Exibindo itens do {products.length} de{" "}
-          {pagination?.items} itens.
-        </p> */}
-        <p className="text-center mt-3 text-xs text-gray-500">
-          Página {page} de {pagination?.pages}
+      <div className="mt-20">
+        <p className="text-center text-sm text-gray-600">
+          Exibindo {products.length} itens.
         </p>
-        <div className="flex justify-center gap-4 mt-4">
+
+        <div className="flex justify-center items-center gap-4 mt-6 mb-10">
           <button
             onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
             disabled={!pagination?.prev}
-            className="px-2 py-1 bg-orange-500 text-white rounded disabled:cursor-not-allowed disabled:opacity-50 disabled:bg-gray-300 disabled:text-gray-700 text-xs"
+            className="px-4 py-2 font-bold bg-orange-500 text-white rounded disabled:cursor-not-allowed disabled:opacity-50 disabled:bg-gray-300 disabled:text-gray-700 text-xs"
           >
-            Página Anterior
+            {"<"}
           </button>
+          <p className="text-xs text-gray-500">
+            Página {page} de {pagination?.pages}
+          </p>
           <button
             onClick={() => setPage((prev) => prev + 1)}
             disabled={!pagination?.next}
-            className="px-2 py-1 bg-orange-500 text-white disabled:cursor-not-allowed disabled:opacity-50 disabled:bg-gray-300 disabled:text-gray-700 rounded-md text-xs"
+            className="px-4 py-2 font-bold bg-orange-500 text-white disabled:cursor-not-allowed disabled:opacity-50 disabled:bg-gray-300 disabled:text-gray-700 rounded-md text-xs"
           >
-            Próxima Página
+            {">"}
           </button>
         </div>
       </div>
