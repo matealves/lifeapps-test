@@ -3,6 +3,7 @@ import { HomeHeader } from "@/components/home/home-header";
 import { HomeBanner } from "@/components/home/home-banner";
 import { HomeFilter } from "@/components/home/home-filter";
 import { HomeProducts } from "@/components/home/home-products";
+import { HomeFooter } from "@/components/home/home-footer";
 
 export default function Page() {
   // redirect("/home");
@@ -13,6 +14,7 @@ export default function Page() {
       <HomeBanner />
       <HomeFilter />
       <HomeProducts />
+      <HomeFooter />
     </div>
   );
 }
