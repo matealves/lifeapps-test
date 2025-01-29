@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 type Props = {
+  id: string;
   image: string;
   name: string;
   price: number;
@@ -9,6 +10,7 @@ type Props = {
 };
 
 export const ProductItem = ({
+  id,
   image,
   name,
   price,
@@ -17,7 +19,7 @@ export const ProductItem = ({
 }: Props) => {
   return (
     <div className="flex flex-col w-72">
-      <Link href="/">
+      <Link href={`/products/${id}`}>
         <div className="relative h-72 w-72 flex justify-center items-center">
           <img src={image} className="h-full w-full object-cover" alt={name} />
 
