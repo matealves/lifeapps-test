@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ProductItem } from "../ui/product-item";
 import {
   getProducts,
   getProductsByCategory,
