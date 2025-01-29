@@ -1,20 +1,7 @@
-// import { redirect } from "next/navigation";
-import { HomeHeader } from "@/components/home/home-header";
-import { HomeBanner } from "@/components/home/home-banner";
-import { HomeFilter } from "@/components/home/home-filter";
-import { HomeProducts } from "@/components/home/home-products";
-import { HomeFooter } from "@/components/home/home-footer";
+import { redirect } from "next/navigation";
 
 export default function Page() {
-  // redirect("/home");
+  redirect("/home");
 
-  return (
-    <div>
-      <HomeHeader />
-      <HomeBanner />
-      <HomeFilter />
-      <HomeProducts />
-      <HomeFooter />
-    </div>
-  );
+  return <div></div>;
 }
