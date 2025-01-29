@@ -36,13 +36,10 @@ export const HomeHeader = ({ children }: Props) => {
           {children}
 
           <div className="text-center">
-            <FontAwesomeIcon
-              icon={faUser}
-              className="size-6 mx-4 cursor-pointer"
-            />
+            <FontAwesomeIcon icon={faUser} className="size-6 mx-4" />
           </div>
           <Link href="/">
-            <div className="text-center pl-2">
+            <div className="text-center pl-2" title="Carrinho">
               <FontAwesomeIcon
                 icon={faCartShopping}
                 className="size-6 ml-2 mr-4 cursor-pointer"
