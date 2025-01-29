@@ -9,18 +9,20 @@ import {
 import { Logo } from "../ui/logo";
 import { useState } from "react";
 import { HomeMenu } from "./home-menu";
-import { NavItem } from "../nav/nav-item";
-import { SearchInput } from "../ui/search-input";
 import Link from "next/link";
+import { ReactNode } from "react";
 
-export const HomeHeader = () => {
+type Props = {
+  children: ReactNode;
+};
+
+export const HomeHeader = ({ children }: Props) => {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
     <div className="flex justify-center">
       <header className="flex justify-between items-center p-6 border-b-2 border-gray-50 h-20 w-full max-w-screen-2xl">
         <div className="">
-          {/* <div className="lg:hidden"> */}
           <Logo size={80} />
         </div>
         <div
@@ -30,16 +32,9 @@ export const HomeHeader = () => {
           <FontAwesomeIcon icon={faBars} className="size-6 text-orange-500" />
         </div>
 
-        {/* <div className=":hidden flex gap-6">
-          <NavItem href="/home" label="Todos os Produtos" />
-          <NavItem href="/home" label="Tênis" />
-          <NavItem href="/home" label="Camisetas" />
-          <NavItem href="/home" label="Calças" />
-        </div> */}
-
         <div className="my-6 hidden md:flex lg:flex items-center text-orange-500">
-          <SearchInput />
-          
+          {children}
+
           <div className="text-center">
             <FontAwesomeIcon
               icon={faUser}
