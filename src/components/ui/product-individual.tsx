@@ -83,8 +83,14 @@ export const ProductIndividual = ({ product }: Props) => {
             <p className="mt-6 mb-2 text-lg font-semibold">Descrição</p>
             <p className="text-sm text-gray-500">{product.description}</p>
 
+            <Link href="/home">
+              <p className="mt-6 text-sm text-gray-500 font-bold text-end underline">
+                Continuar comprando →
+              </p>
+            </Link>
+
             <Link href="/cart">
-              <p className="mt-6 text-sm text-orange-500 font-bold text-end">
+              <p className="mt-5 text-sm text-orange-500 font-bold text-end underline">
                 Ir para o carrinho →
               </p>
             </Link>
