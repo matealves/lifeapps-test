@@ -66,7 +66,8 @@ export const HomeProducts = () => {
     fetchProducts();
   }, [page, selectedCategory, orderBy]);
 
-  if (loading) return <p>Carregando...</p>;
+  if (loading)
+    return <p className="min-h-[62vh] text-center mt-16">Carregando...</p>;
 
   return (
     <>
