@@ -41,36 +41,14 @@ export const getProducts = async (
   }
 };
 
-export const searchProductsByName = async (query: string): Promise<Product[]> => {
+export const searchProductsByName = async (
+  query: string
+): Promise<Product[]> => {
   const response = await req.get(`/products`);
-  return response.data.filter(
-    (product: Product) =>
-      removeAcento(product.name).includes(removeAcento(query))
-    // product.name.toLowerCase().includes(query.toLowerCase())
+  return response.data.filter((product: Product) =>
+    removeAcento(product.name).includes(removeAcento(query))
   );
 };
-
-// export const getProductsByPrice = async (
-//   sort: SortType = "asc",
-//   page: number = 1,
-//   limit: number = 8
-// ): Promise<ProductResponse | null> => {
-//   try {
-//     const result = await req.get(
-//       `/products?_page=${page}&_per_page=${limit}&_sort=${
-//         sort === "asc" ? "price" : "-price"
-//       }`
-//     );
-
-//     return result.data;
-//   } catch (error) {
-//     console.error(
-//       `Erro ao buscar produtos ordenados por preço (${sort}):`,
-//       error
-//     );
-//     return null;
-//   }
-// };
 
 // Solução para ordenar corretamente utilizando múltiplas propriedades
 export const getProductsByPrice = async (
@@ -109,30 +87,6 @@ export const getProductsByPrice = async (
     return null;
   }
 };
-
-// export const getProductsByCategory = async (
-//   category: string,
-//   sort: SortType | null = null,
-//   page: number = 1,
-//   limit: number = 8
-// ): Promise<ProductResponse | null> => {
-//   try {
-//     let url = `/products?category=${category}&_page=${page}&_per_page=${limit}`;
-
-//     if (sort) {
-//       url += `&_sort=${sort === "asc" ? "price" : "-price"}`;
-//     }
-
-//     const result = await req.get(url);
-//     return result.data;
-//   } catch (error) {
-//     console.error(
-//       `Erro ao buscar produtos da categoria '${category}' ordenados por '${sort}':`,
-//       error
-//     );
-//     return null;
-//   }
-// };
 
 // Solução para ordenar corretamente utilizando múltiplas propriedades
 export const getProductsByCategory = async (
