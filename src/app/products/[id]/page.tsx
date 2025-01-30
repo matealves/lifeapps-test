@@ -43,17 +43,7 @@ export default function Page() {
         <p className="min-h-[62vh] text-center mt-16">Carregando...</p>
       )}
 
-      {!loading && product && (
-        <ProductIndividual
-          image={product.image}
-          name={product.name}
-          id={product.id}
-          price={product.price}
-          description={product.description}
-          discount_percentage={product.discount_percentage ?? false}
-          promotional_price={product.promotional_price ?? false}
-        />
-      )}
+      {!loading && product && <ProductIndividual product={product} />}
 
       <HomeFooter />
     </div>
