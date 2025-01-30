@@ -7,4 +7,5 @@ export type Product = {
   price: number;
   discount_percentage?: number;
   promotional_price?: number;
+  qtd?: number;
 };
