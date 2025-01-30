@@ -31,6 +31,7 @@ export const ProductsGrid = ({
               promotional_price,
             }) => (
               <ProductItem
+                key={id}
                 id={id}
                 image={image}
                 name={name}
