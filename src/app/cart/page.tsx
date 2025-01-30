@@ -27,6 +27,12 @@ export default function Page() {
     window.dispatchEvent(new Event("cartUpdated"));
   };
 
+  const handleRemoveAllItems = () => {
+    localStorage.setItem("cart_shopping", JSON.stringify([]));
+    setProducts([]);
+    window.dispatchEvent(new Event("cartUpdated"));
+  };
+
   const handleQuantityChange = (productId: string, newQuantity: number) => {
     const updatedCart = products.map((item) =>
       item.id === productId ? { ...item, qtd: newQuantity } : item
@@ -80,7 +86,7 @@ export default function Page() {
             </div>
 
             <div className="mb-28 md:mt-6 lg:mt-6 md:my-12 lg:my-12">
-              <ResumeCartItem subtotal={subtotal} total={total} />
+              <ResumeCartItem subtotal={subtotal} total={total} onClearCart={handleRemoveAllItems}/>
             </div>
           </>
         )}

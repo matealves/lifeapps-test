@@ -1,9 +1,26 @@
+import { useState } from "react";
+import SuccessModal from "./modal";
+import { useRouter } from "next/navigation";
+
 type Props = {
   subtotal: number;
   total: number;
+  onClearCart: () => void;
 };
 
-export const ResumeCartItem = ({ subtotal, total }: Props) => {
+export const ResumeCartItem = ({ subtotal, total, onClearCart }: Props) => {
+  const [showModal, setShowModal] = useState(false);
+  const router = useRouter();
+
+  const handleClickFinalizeOrder = () => {
+    setShowModal(true);
+
+    setTimeout(() => {
+      onClearCart();
+      router.push("/home");
+    }, 5000);
+  };
+
   return (
     <div className="flex flex-col p-4 w-[70vw] min-w-[250px] md:w-[250px] lg:w-[350px]">
       <div className="uppercase font-semibold mb-8 text-gray-600 tracking-wider">
@@ -35,15 +52,17 @@ export const ResumeCartItem = ({ subtotal, total }: Props) => {
         </p>
       </div>
 
+      {showModal && <SuccessModal onClose={() => setShowModal(false)} />}
+
       <button
-        // onClick={handleClickAddToCart}
+        onClick={handleClickFinalizeOrder}
         className="uppercase bg-green-500 hover:bg-green-600 text-white py-2 rounded-md mt-8 text-xs"
       >
         Finalizar pedido
       </button>
 
       <button
-        // onClick={handleClickAddToCart}
+        onClick={onClearCart}
         className="uppercase bg-red-400 hover:bg-red-500 text-white py-2 px-3 rounded-md mt-6 text-xs"
       >
         Limpar carrinho
