@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Logo } from "../ui/logo";
-import { faHouse, faUser, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { SearchInput } from "../ui/search-input";
-import { NavItem } from "../nav/nav-item";
 import { FilterItem } from "../ui/filter-item";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 type Props = {
   closeAction?: () => void;
@@ -13,8 +13,6 @@ export const HomeMenu = ({ closeAction }: Props) => {
   return (
     <div className="md:hidden lg:hidden fixed right-0 top-0 h-screen p-6 z-10 transition-transform bg-white w-2/3">
       <div className="flex justify-end">
-        {/* <Logo size={80} /> */}
-
         <div
           onClick={closeAction}
           className="cursor-pointer flex justify-end size-12 rounded-full"
@@ -30,11 +28,26 @@ export const HomeMenu = ({ closeAction }: Props) => {
         <SearchInput />
       </div>
 
-      <div className="flex flex-col">
-        <FilterItem label="Todos os Produtos" active />
-        <FilterItem label="Camisetas" />
-        <FilterItem label="Calças" />
-        <FilterItem label="Tênis" />
+      <div className="flex flex-col gap-4 text-gray-500 font-bold">
+        <Link href="/">Todos os Produtos</Link>
+        <Link
+          href={`/search?q=${encodeURIComponent("Camiseta")}`}
+          onClick={closeAction}
+        >
+          Camiseta
+        </Link>
+        <Link
+          href={`/search?q=${encodeURIComponent("Calça")}`}
+          onClick={closeAction}
+        >
+          Calça
+        </Link>
+        <Link
+          href={`/search?q=${encodeURIComponent("Tênis")}`}
+          onClick={closeAction}
+        >
+          Tênis
+        </Link>
       </div>
     </div>
   );
