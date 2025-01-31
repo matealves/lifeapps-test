@@ -53,7 +53,7 @@ export const HomeHeader = ({ children }: Props) => {
             <FontAwesomeIcon icon={faUser} className="size-6 mx-4" />
           </div>
           <Link href="/cart">
-            <div className="text-center pl-2 relative" title="Carrinho">
+            <div className="cart text-center pl-2 relative" title="Carrinho">
               <FontAwesomeIcon
                 icon={faCartShopping}
                 className="size-6 ml-2 mr-4 cursor-pointer"
