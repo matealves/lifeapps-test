@@ -49,7 +49,7 @@ export default function Page() {
   const total = subtotal + 27.9;
 
   return (
-    <div className="">
+    <div className="cart-page">
       <HomeHeader>
         <SearchInput />
       </HomeHeader>
