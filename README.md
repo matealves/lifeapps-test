@@ -1,6 +1,6 @@
 # E-commerce - Frontend
 
-### Interface de um E-commerce, consumindo itens de uma API. 
+### Interface de um E-commerce, consumindo itens de uma API.
 
 [• Visão geral](#review)<br>
 [• Como rodar o projeto?](#start)<br>
@@ -19,7 +19,7 @@ Interface completa de um E-commerce, consumindo uma **API**, com diversas **inte
 
 <p id="start"></p>
 
-### Como rodar o projeto?
+### Como rodar o projeto no terminal?
 
 #### 1 - Clonar o Repositório
 
@@ -28,15 +28,41 @@ git clone https://github.com/matealves/lifeapps-test.git
 ```
 
 #### 2 - Instalar dependências:
+
 ```sh
 npm install
 ```
 
-#### 3 - Rodar no localhost:
+#### 3 - Rodar no terminal:
+
 ```sh
 npm run dev
 ```
+
 <br>
+
+### Como rodar o projeto com Docker?
+****Necessário possuir o Docker instalado.***
+
+#### 1 - Clonar o Repositório
+
+```sh
+git clone https://github.com/matealves/lifeapps-test.git
+```
+
+#### 2 - Rodar comando no terminal:
+
+```sh
+docker-compose up -d
+```
+
+#### 3 - Acessar localhost pelo navegador:
+
+```sh
+http://localhost:3000
+```
+
+<br><br>
 
 <p id="leng"></p>
 
@@ -60,6 +86,7 @@ Entre em contato através dos links a seguir!
 <br>
 <a href="https://www.linkedin.com/in/mateusalvesds/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
 <a href = "mailto:contatomateusalves@hotmail.com"><img src="https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" target="_blank"></a>
+
 </p>
 <br>
 <br>
