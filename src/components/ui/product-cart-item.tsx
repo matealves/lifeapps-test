@@ -37,7 +37,7 @@ export const ProductCartItem = ({
   };
 
   return (
-    <div className="flex border border-gray-200 justify-between items-center px-4 max-w-[600px]">
+    <div className="product-card flex border border-gray-200 justify-between items-center px-4 max-w-[600px]">
       <div className="relative h-28 w-36 flex justify-center items-center">
         <img
           src={product.image}
