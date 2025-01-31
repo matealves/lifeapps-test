@@ -15,7 +15,7 @@
 Interface completa de um E-commerce, consumindo uma **API**, com diversas **interações** para o usuário. Sendo elas, paginação, filtro por categoria, busca pelo nome ou pedaço do nome, página individual do produto, e toda interação no carrinho, para aumentar e / ou diminuir a quantidade de cada item, sendo calculado em tempo real o subtotal e total do pedido.
 <br>
 
-#### [Deploy do projeto (preview)](#contato)<br>
+#### [Deploy do projeto (preview)](#contato)<br><br>
 
 <p id="start"></p>
 
