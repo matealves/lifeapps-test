@@ -56,7 +56,7 @@ export const ResumeCartItem = ({ subtotal, total, onClearCart }: Props) => {
 
       <button
         onClick={handleClickFinalizeOrder}
-        className="uppercase bg-green-500 hover:bg-green-600 text-white py-2 rounded-md mt-8 text-xs"
+        className="finish-order uppercase bg-green-500 hover:bg-green-600 text-white py-2 rounded-md mt-8 text-xs"
       >
         Finalizar pedido
       </button>

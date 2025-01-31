@@ -1,6 +1,6 @@
 export default function SuccessModal({ onClose }: { onClose: () => void }) {
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+    <div className="modal fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <div className="bg-white rounded-2xl shadow-xl p-6 max-w-sm w-full text-center animate-fadeIn">
         <svg
           className="w-16 h-16 text-green-500 mx-auto mb-4"

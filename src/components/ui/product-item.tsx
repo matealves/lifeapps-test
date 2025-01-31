@@ -20,7 +20,7 @@ export const ProductItem = ({
   return (
     <div className="flex flex-col w-72">
       <Link href={`/products/${id}`}>
-        <div className="relative h-72 w-72 flex justify-center items-center">
+        <div className="product relative h-72 w-72 flex justify-center items-center">
           <img src={image} className="h-full w-full object-cover" alt={name} />
 
           {discount_percentage && (

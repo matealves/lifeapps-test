@@ -20,7 +20,7 @@ export const ProductsGrid = ({
   return (
     <div className="h-screen-2xl m-8 flex flex-col justify-center items-center min-h-[62vh]">
       <div className="w-full max-w-screen-2xl justify-center flex">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-14">
+        <div className="products grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-14">
           {products.map(
             ({
               id,

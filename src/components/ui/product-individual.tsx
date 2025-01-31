@@ -32,7 +32,7 @@ export const ProductIndividual = ({ product }: Props) => {
   };
 
   return (
-    <div className="flex mt-20 justify-center min-h-[80vh] w-full">
+    <div className="product-page flex mt-20 justify-center min-h-[80vh] w-full">
       <div className="w-full max-w-screen-2xl flex justify-center flex-col md:flex-row lg:flex-row items-center md:items-start lg:items-start">
         <div className="relative h-96 w-96 flex justify-center items-center">
           <img
@@ -98,9 +98,9 @@ export const ProductIndividual = ({ product }: Props) => {
 
           <button
             onClick={() => handleClickAddToCart(product)}
-            className={`${
+            className={`add-to-cart ${
               added ? "bg-blue-500" : "bg-orange-500 hover:bg-orange-400"
-            } uppercase  text-white py-3 rounded-md flex justify-center items-center`}
+            } uppercase text-white py-3 rounded-md flex justify-center items-center`}
             disabled={added ?? false}
           >
             {!added && <span className="">Adicionar ao carrinho</span>}
